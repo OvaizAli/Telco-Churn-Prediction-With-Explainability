@@ -12,6 +12,7 @@
 # tiktoken
 # sentence-transformers
 streamlit
+joblib
 numpy
 pandas
 scikit-learn

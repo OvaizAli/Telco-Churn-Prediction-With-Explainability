@@ -1,5 +1,5 @@
 import streamlit as st
-import pickle
+import joblib
 import numpy as np
 import pandas as pd
 from sklearn.decomposition import PCA
@@ -10,13 +10,11 @@ import scipy.optimize as opt
 import random
 import re
 
-# Load the trained stacking model and PCA transformer from the pickle file
-with open('stacking_model.pkl', 'rb') as model_file:
-    stacking_model = pickle.load(model_file)
+# Load the trained stacking model from the joblib file
+stacking_model = joblib.load('stacking_model.joblib')
 
-# Load the PCA transformer used during training
-with open('pca_transformer.pkl', 'rb') as pca_file:
-    pca = pickle.load(pca_file)
+# Load the PCA transformer used during training from the joblib file
+pca = joblib.load('pca_transformer.joblib')
 
 def random_input():
     """Generate random input values for testing."""
@@ -263,9 +261,8 @@ def plot_prediction_probabilities(probabilities):
     
     return fig
 
-# Load the scaler used during training
-with open('scaler.pkl', 'rb') as scaler_file:
-    scaler = pickle.load(scaler_file)
+# Load the scaler used during training from the joblib file
+scaler = joblib.load('scaler.joblib')
 
 def scale_user_input(user_input):
     """Scale user input data."""
@@ -288,9 +285,8 @@ def main():
     # Extract numerical features
     numerical_data = user_input[numerical_features]
 
-    # Load the scaler used during training
-    with open('scaler.pkl', 'rb') as scaler_file:
-        scaler = pickle.load(scaler_file)
+    # Load the scaler used during training from the joblib file
+    scaler = joblib.load('scaler.joblib')
 
     def scale_numerical_features(numerical_data):
         """Scale only the numerical features."""
