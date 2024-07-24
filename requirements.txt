@@ -1,0 +1,21 @@
+# streamlit
+# python-dotenv
+# PyPDF2
+# langchain
+# faiss-cpu
+# htmltemplate
+# langchain-community
+# langchain-huggingface
+# streamlit-chat
+# transformers
+# openai
+# tiktoken
+# sentence-transformers
+streamlit
+pickle5
+numpy
+pandas
+scikit-learn
+lime
+plotly
+scipy
