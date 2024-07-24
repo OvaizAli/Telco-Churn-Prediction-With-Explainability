@@ -13,7 +13,7 @@
 # sentence-transformers
 numpy
 pandas
-scikit-learn==1.2.2
+scikit-learn
 lime
 plotly
 scipy
