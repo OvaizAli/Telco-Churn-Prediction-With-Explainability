@@ -1,7 +1,3 @@
-Here’s a comprehensive README for your GitHub repository:
-
----
-
 # Telco-Churn-Prediction-With-Explainability
 
 ## Overview
